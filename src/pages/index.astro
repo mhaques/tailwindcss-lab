@@ -9,113 +9,148 @@ import MainHeader from "./headers/mainheader.astro";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Launch</title>
   </head>
-  <body class="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-gray-100 font-sans selection:bg-indigo-500 selection:text-white">
-  
-	<MainHeader />
+  <body class="bg-gradient-to-b from-gray-900 via-black to-gray-900 text-gray-100 font-sans">
+    
+    <!-- Header -->
+    <MainHeader />
 
     <!-- Hero -->
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
-      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-in">
+    <section id="hero" class="min-h-screen flex flex-col items-center justify-center text-center px-6">
+      <h1 class="text-6xl font-extrabold mb-6 animate-fade-in">
         🚀 Placeholder Product
       </h1>
-      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mb-8 animate-fade-in [animation-delay:200ms]">
-        A bold tagline goes here. Impress your audience with clarity and confidence.
+      <p class="text-xl text-gray-400 max-w-2xl mb-8 animate-fade-in" data-anim-delay="200">
+        Some amazing great tagline - yes I'm so creative...
       </p>
-      <div class="flex gap-4 animate-fade-in [animation-delay:400ms]">
-        <button class="px-8 py-3 bg-indigo-600 rounded-2xl text-lg font-semibold hover:bg-indigo-700 transition">
-          Get Started
-        </button>
-        <button class="px-8 py-3 border border-gray-600 rounded-2xl text-lg font-semibold hover:border-indigo-400 hover:text-indigo-400 transition">
-          Learn More
-        </button>
+
+      <div class="flex gap-4 animate-fade-in" data-anim-delay="400">
+        <a href="#pricing" class="btn inline-block px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg">Get Started</a>
+        <a href="#features" class="btn inline-block px-6 py-2 bg-transparent border border-white/20 text-white rounded-lg hover:bg-white/5">Learn More</a>
       </div>
     </section>
 
     <!-- Features -->
-    <section class="py-24 px-6 max-w-6xl mx-auto">
+    <section id="features" class="py-24 px-6 max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold text-center mb-16">Features</h2>
       <div class="grid md:grid-cols-3 gap-10">
-        <div class="p-8 bg-gray-800/50 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-xl transition">
-          <h3 class="text-2xl font-semibold mb-3">Feature One</h3>
-          <p class="text-gray-400">Concise benefit description written in clear UK English.</p>
+        <div class="card bg-slate-800 border border-gray-700 shadow-lg hover:shadow-2xl transform hover:scale-105 transition rounded-xl overflow-hidden">
+          <div class="card-body p-6">
+            <h3 class="card-title text-xl text-white mb-2">Feature One</h3>
+            <p class="text-gray-300">Some description text highlighting the features of the product.</p>
+          </div>
         </div>
-        <div class="p-8 bg-gray-800/50 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-xl transition">
-          <h3 class="text-2xl font-semibold mb-3">Feature Two</h3>
-          <p class="text-gray-400">Concise benefit description written in clear UK English.</p>
+        <div class="card bg-slate-800 border border-gray-700 shadow-lg hover:shadow-2xl transform hover:scale-105 transition rounded-xl overflow-hidden">
+          <div class="card-body p-6">
+            <h3 class="card-title text-xl text-white mb-2">Feature Two</h3>
+            <p class="text-gray-300">Some description text highlighting the features of the product.</p>
+          </div>
         </div>
-        <div class="p-8 bg-gray-800/50 rounded-2xl shadow-lg hover:-translate-y-2 hover:shadow-xl transition">
-          <h3 class="text-2xl font-semibold mb-3">Feature Three</h3>
-          <p class="text-gray-400">Concise benefit description written in clear UK English.</p>
+        <div class="card bg-slate-800 border border-gray-700 shadow-lg hover:shadow-2xl transform hover:scale-105 transition rounded-xl overflow-hidden">
+          <div class="card-body p-6">
+            <h3 class="card-title text-xl text-white mb-2">Feature Three</h3>
+            <p class="text-gray-300">Some description text highlighting the features of the product.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Pricing -->
-    <section class="py-24 px-6 bg-gradient-to-r from-gray-800/60 via-gray-900/70 to-gray-800/60">
+    <section id="pricing" class="py-24 px-6 bg-gray-900">
       <h2 class="text-4xl font-bold text-center mb-16">Pricing</h2>
       <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        <div class="p-8 rounded-2xl bg-gray-800/70 text-center hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-4">Basic</h3>
-          <p class="text-4xl font-extrabold mb-4">£9<span class="text-lg font-normal">/mo</span></p>
-          <p class="text-gray-400 mb-6">For individuals and small projects.</p>
-          <button class="px-6 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition">Choose</button>
+        <div class="card bg-gray-900 text-white border border-gray-800 shadow-md hover:shadow-2xl transform hover:scale-105 transition rounded-xl overflow-hidden">
+          <div class="card-body p-8 text-center">
+            <h3 class="text-xl font-semibold mb-2">Basic</h3>
+            <p class="text-4xl font-bold">£9<span class="text-lg">/mo</span></p>
+            <p class="mb-6 text-gray-400">For individuals and small projects.</p>
+            <a href="#features" class="btn inline-block px-5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg w-full">Choose</a>
+          </div>
         </div>
-        <div class="p-8 rounded-2xl bg-indigo-600 text-center shadow-lg scale-105">
-          <h3 class="text-xl font-semibold mb-4">Pro</h3>
-          <p class="text-4xl font-extrabold mb-4">£29<span class="text-lg font-normal">/mo</span></p>
-          <p class="mb-6">Perfect for growing teams.</p>
-          <button class="px-6 py-2 bg-white text-indigo-700 font-semibold rounded-lg hover:bg-gray-200 transition">Choose</button>
+        <div class="card transform scale-105 rounded-xl overflow-hidden ring-1 ring-indigo-600 shadow-2xl">
+          <div class="card-body p-8 text-center bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
+			<p class="mb-4">Our most popular plan!</p>
+            <h3 class="text-xl font-semibold mb-2">Pro</h3>
+            <p class="text-4xl font-bold">£29<span class="text-lg">/mo</span></p>
+            <p class="mb-6">Perfect for growing teams.</p>
+            <a href="#features" class="btn inline-block px-5 py-1.5 bg-white text-indigo-700 w-full rounded-lg hover:bg-white/90">Choose</a>
+          </div>
         </div>
-        <div class="p-8 rounded-2xl bg-gray-800/70 text-center hover:scale-105 transition">
-          <h3 class="text-xl font-semibold mb-4">Enterprise</h3>
-          <p class="text-4xl font-extrabold mb-4">Custom</p>
-          <p class="text-gray-400 mb-6">Tailored for larger organisations.</p>
-          <button class="px-6 py-2 bg-indigo-600 rounded-lg hover:bg-indigo-700 transition">Enquire</button>
+        <div class="card bg-gray-900 text-white border border-gray-800 shadow-md hover:shadow-2xl transform hover:scale-105 transition rounded-xl overflow-hidden">
+          <div class="card-body p-8 text-center">
+            <h3 class="text-xl font-semibold mb-2">Enterprise</h3>
+            <p class="text-4xl font-bold">Custom</p>
+            <p class="mb-6 text-gray-400">Tailored for larger organisations.</p>
+            <a href="#faq" class="btn inline-block px-5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg w-full">Enquire</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="py-24 px-6 max-w-6xl mx-auto">
+    <section id="testimonials" class="py-24 px-6 max-w-6xl mx-auto">
       <h2 class="text-4xl font-bold text-center mb-16">What People Say</h2>
       <div class="grid md:grid-cols-3 gap-10">
-        <div class="p-6 bg-gray-800/50 rounded-2xl shadow hover:-translate-y-2 transition">
-          <p class="italic text-gray-300 mb-4">“This product transformed the way I work. Brilliant experience.”</p>
-          <p class="font-semibold">– Jane Doe</p>
+        <div class="card bg-slate-800 border border-gray-700 shadow-md hover:shadow-xl transform hover:-translate-y-2 transition rounded-xl overflow-hidden">
+          <div class="card-body p-6">
+            <p class="italic text-gray-200">“This product transformed the way I work. Brilliant experience.”</p>
+            <div class="mt-4 font-semibold text-white">– Jane Doe</div>
+          </div>
         </div>
-        <div class="p-6 bg-gray-800/50 rounded-2xl shadow hover:-translate-y-2 transition">
-          <p class="italic text-gray-300 mb-4">“Outstanding support and value for money. Highly recommended.”</p>
-          <p class="font-semibold">– John Smith</p>
+        <div class="card bg-slate-800 border border-gray-700 shadow-md hover:shadow-xl transform hover:-translate-y-2 transition rounded-xl overflow-hidden">
+          <div class="card-body p-6">
+            <p class="italic text-gray-200">“Outstanding support and value for money. Highly recommended.”</p>
+            <div class="mt-4 font-semibold text-white">– John Smith</div>
+          </div>
         </div>
-        <div class="p-6 bg-gray-800/50 rounded-2xl shadow hover:-translate-y-2 transition">
-          <p class="italic text-gray-300 mb-4">“Finally, a product that delivers what it promises without compromise.”</p>
-          <p class="font-semibold">– Alex Johnson</p>
+        <div class="card bg-slate-800 border border-gray-700 shadow-md hover:shadow-xl transform hover:-translate-y-2 transition rounded-xl overflow-hidden">
+          <div class="card-body p-6">
+            <p class="italic text-gray-200">“Finally, a product that delivers what it promises without compromise.”</p>
+            <div class="mt-4 font-semibold text-white">– Alex Johnson</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="py-24 px-6 bg-gradient-to-r from-gray-800/60 via-gray-900/70 to-gray-800/60">
+    <!-- FAQ: accessible accordion (details/summary) -->
+    <section id="faq" class="py-24 px-6 bg-gray-900">
       <h2 class="text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
-      <div class="max-w-3xl mx-auto space-y-8">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">How does this product work?</h3>
-          <p class="text-gray-400">A brief explanation to reassure potential customers.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Can I cancel at any time?</h3>
-          <p class="text-gray-400">Yes, your subscription is flexible and easy to manage.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Do you provide support?</h3>
-          <p class="text-gray-400">Absolutely — friendly support is available via email and live chat.</p>
-        </div>
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <details class="group bg-gray-900 text-white rounded-lg shadow-lg border border-gray-800" open>
+          <summary class="cursor-pointer px-6 py-4 flex justify-between items-center text-lg font-medium">
+            How does this product work?
+            <span class="ml-4 opacity-60 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-300">
+            <p>A brief explanation to reassure potential customers.</p>
+          </div>
+        </details>
+
+        <details class="group bg-gray-900 text-white rounded-lg shadow-lg border border-gray-800">
+          <summary class="cursor-pointer px-6 py-4 flex justify-between items-center text-lg font-medium">
+            Can I cancel at any time?
+            <span class="ml-4 opacity-60 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-300">
+            <p>Yes, your subscription is flexible and easy to manage.</p>
+          </div>
+        </details>
+
+        <details class="group bg-gray-900 text-white rounded-lg shadow-lg border border-gray-800">
+          <summary class="cursor-pointer px-6 py-4 flex justify-between items-center text-lg font-medium">
+            Do you provide support?
+            <span class="ml-4 opacity-60 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-300">
+            <p>Absolutely — friendly support is available via email and live chat.</p>
+          </div>
+        </details>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 text-center text-sm text-gray-500">
-      © 2025 Placeholder Company. All rights reserved.
+    <footer class="footer footer-center p-10 bg-gray-900 text-gray-300 rounded">
+      <p>© 2025 mhaques. All rights reserved.</p>
     </footer>
+
   </body>
 </html>

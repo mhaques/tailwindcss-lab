@@ -1,12 +1,45 @@
 @import "tailwindcss";
 @plugin "flyonui";
 
-  @keyframes fade-in {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fade-in {
+@import "../../../node_modules/flyonui/variants.css"; 
+
+@source "../../../node_modules/flyonui/dist/index.js";
+
+/* fade-in animation */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
     animation: fade-in 0.8s ease forwards;
-  }
-  .animate-fade-in[animation-delay="200ms"] { animation-delay: 0.2s; }
-  .animate-fade-in[animation-delay="400ms"] { animation-delay: 0.4s; }
+}
+
+/* use data attributes for delays */
+.animate-fade-in[data-anim-delay="200"] {
+    animation-delay: 0.2s;
+}
+
+.animate-fade-in[data-anim-delay="400"] {
+    animation-delay: 0.4s;
+}
+
+/* small visual helpers to keep cards consistent */
+.card-body { /* utility class for non-tailwind consumers */ }
+.card-title { /* reserved for future overrides */ }
+
+/* roll a subtle backdrop for elevated cards */
+.card, .card .card-body {
+  /* keep everything visually cohesive with page gradient — no lighter greys */
+}
+
+/* optional: smooth scroll for anchor links (Windows / modern browsers) */
+html {
+  scroll-behavior: smooth;
+}
